@@ -20,7 +20,6 @@ servers:
 proxy:
   ssl: false
   host: 91.98.231.143
-  app_port: 8080
   # Proxy connects to your container on port 80 by default.
   # app_port: 3000
 
