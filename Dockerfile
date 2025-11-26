@@ -8,10 +8,6 @@ COPY --chown=www-data:www-data . /var/www/html
 USER www-data
 # Run Composer...
 RUN composer install --no-dev --prefer-dist --optimize-autoloader \
-    && php artisan optimize:clear \
-    && php artisan config:cache \
-    && php artisan route:cache \
-    && php artisan view:cache \
     && npm install \
     && npm run build
 
