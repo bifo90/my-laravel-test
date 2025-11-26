@@ -50,7 +50,6 @@ env:
     APP_ENV: production
     APP_DEBUG: false
     APP_URL: https://areacaroutlet.local
-    DB_CONNECTION: sqlite
     APP_LOCALE: it
     APP_FALLBACK_LOCALE: it
     APP_FAKER_LOCALE: it_IT
