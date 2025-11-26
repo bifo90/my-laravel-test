@@ -11,7 +11,6 @@ RUN composer install --no-dev --prefer-dist --optimize-autoloader
 
 FROM base AS production
 
-EXPOSE 80
 # Set env variables...
 ENV PHP_OPCACHE_ENABLE=1
 ENV AUTORUN_ENABLED="true"
