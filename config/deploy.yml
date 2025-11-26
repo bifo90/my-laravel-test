@@ -121,6 +121,3 @@ accessories:
 #     port: 6379
 #     directories:
 #       - data:/data
-healthcheck:
-  path: /up
-  port: 80
