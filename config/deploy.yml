@@ -109,10 +109,10 @@ accessories:
       clear:
         MYSQL_ROOT_HOST: '%'
       secret:
-        - MYSQL_ROOT_PASSWORD: MY_SQL_PASSWORD
-        - MYSQL_USER: MY_SQL_USERNAME
-        - MYSQL_DATABASE: MY_SQL_DATABASE
-        - MYSQL_PASSWORD: MY_SQL_PASSWORD
+        - MYSQL_ROOT_PASSWORD:MY_SQL_PASSWORD
+        - MYSQL_USER:MY_SQL_USERNAME
+        - MYSQL_DATABASE:MY_SQL_DATABASE
+        - MYSQL_PASSWORD:MY_SQL_PASSWORD
     directories:
       - data:/var/lib/mysql
 #   redis:
