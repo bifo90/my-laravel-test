@@ -7,6 +7,7 @@ FROM base AS build
 COPY --chown=www-data:www-data . /var/www/html
 USER www-data
 
+COPY /database/database.sqlite /var/www/html/database/database.sqlite
 # Run Composer...
 RUN composer install --no-dev --prefer-dist --optimize-autoloader \
     && php artisan optimize:clear \
