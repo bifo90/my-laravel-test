@@ -67,9 +67,9 @@ env:
     DB_PORT: 3306          
   secret:
     - APP_KEY
-    - DB_DATABASE: MY_SQL_DATABASE
-    - DB_USERNAME: MY_SQL_USERNAME
-    - DB_PASSWORD: MY_SQL_PASSWORD
+    - DB_DATABASE:MY_SQL_DATABASE
+    - DB_USERNAME:MY_SQL_USERNAME
+    - DB_PASSWORD:MY_SQL_PASSWORD
 
 # Aliases are triggered with "bin/kamal <alias>". You can overwrite arguments on invocation:
 # "bin/kamal app logs -r job" will tail logs from the first server in the job section.
