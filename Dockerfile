@@ -6,8 +6,6 @@ FROM base AS build
 
 COPY --chown=www-data:www-data . /var/www/html
 USER www-data
-
-COPY /database/database.sqlite /var/www/html/database/database.sqlite
 # Run Composer...
 RUN composer install --no-dev --prefer-dist --optimize-autoloader \
     && php artisan optimize:clear \
@@ -19,11 +17,10 @@ RUN composer install --no-dev --prefer-dist --optimize-autoloader \
 
 FROM base AS production
 
+EXPOSE 8080
 # Set env variables...
 ENV PHP_OPCACHE_ENABLE=1
 ENV AUTORUN_ENABLED="true"
 
 COPY --chown=www-data:www-data --from=build /var/www/html /var/www/html
 USER www-data
-
-EXPOSE 8080
