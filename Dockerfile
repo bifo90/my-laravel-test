@@ -9,9 +9,12 @@ USER www-data
 
 # Run Composer...
 RUN composer install --no-dev --prefer-dist --optimize-autoloader \
-    && php artisan tailwindcss:download --force \
-    && php artisan tailwindcss:build --prod \
-    && php artisan importmap:optimize
+    && php artisan optimize:clear \
+    && php artisan config:cache \
+    && php artisan route:cache \
+    && php artisan view:cache \
+    && npm install \
+    && npm run build
 
 FROM base AS production
 
