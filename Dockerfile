@@ -24,3 +24,5 @@ ENV AUTORUN_ENABLED="true"
 
 COPY --chown=www-data:www-data --from=build /var/www/html /var/www/html
 USER www-data
+
+EXPOSE 8080
