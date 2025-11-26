@@ -15,5 +15,7 @@ FROM base AS production
 ENV PHP_OPCACHE_ENABLE=1
 ENV AUTORUN_ENABLED="true"
 
+EXPOSE 80
+
 COPY --chown=www-data:www-data --from=build /var/www/html /var/www/html
 USER www-data
