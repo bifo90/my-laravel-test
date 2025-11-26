@@ -51,7 +51,7 @@ env:
     APP_URL: "https://areacaroutlet.local"
     ASSET_URL: "https://areacaroutlet.local"
     DB_CONNECTION: "sqlite"
-    DB_DATABASE: "/var/www/html/data/production_laravel_blog.sqlite3"
+    DB_DATABASE: "/var/www/html/database/production_laravel_blog.sqlite3"
     MAIL_MAILER: "log"
     SESSION_DRIVER: "file"
     CACHE_STORE: "file"         
